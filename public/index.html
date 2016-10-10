@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--
+         * This script tag is the "Babel Transformer". It's included during development to transform your React .jsx files into js files.
+         * This script should be removed for production after transforming all .jsx files to .js.
+        -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.17.0/babel.min.js"></script>
+
+        <!--
+         * This script contains your React code. Notice the type is "text/babel". This tells the above-mentioned Bable Transformer to transform this file.
+         * For production this file will need to be transformed into a js file and the type changed to "text/javascript"
+        -->
+        <script type="text/babel" src="js/app.jsx"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!--
+         * These two scripts are required to run React code. These are development versions with additional error logging.
+         * For production they should be replaced with the minified production versions.
+        -->
+        <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:600i|Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <style type="text/css">
+            body{
+                font-family: 'Roboto';
+            }
+            .todo-container{
+                width: 100%;
+                min-height: 100px;
+                background: #fffffc;
+                margin-top: 60px;
+                border-radius: 4px;
+            }
+            .todo-header{
+                background: #98CE00;
+                border-radius: 4px;
+                font-size: 24px;
+                padding: 10px;
+                color: #fff;
+            }
+            .todo-body{
+                border: 2px solid #98CE00;
+                border-radius: 4px;
+                margin-top: 8px;
+                padding: 10px;
+                float: left;
+            }
+            .todo-input{
+                border: 2px solid #98CE00;
+                width: 400px;
+                height: 40px;
+                border-radius: 4px;
+                background-color: #fffffc;
+                color: #757780;
+                font-size: 24px;
+                padding-left: 6px;
+                float: left;
+            }
+            .todo-button{
+                background-color: #6CCFF6;
+                color: #fff;
+                border: none;
+                border-radius: 4px;
+                padding: 6px 18px;
+                height: 40px;
+                font-size: 18px;
+                margin-left: 10px;
+                float: left;
+            }
+            .todo-button:hover{
+                background-color: #8edfff;
+            }
+            .todo-button:active{
+                background-color: #5bc1e9;
+            }
+            .todo-button:focus{
+                outline: none;
+            }
+            .todo{
+                width: 400px;
+                padding: 10px;
+                font-size: 24px;
+                background: #98CE00;
+                color: #fff;
+                border-radius: 4px;
+                margin-top: 8px;
+                float: left;
+                clear: both;
+                cursor: pointer;
+                transition: all .2s;
+                margin-left: 10px;
+                -webkit-user-select: none; /* Chrome/Safari */
+                -moz-user-select: none; /* Firefox */
+                -ms-user-select: none; /* IE10+ */
+            }
+            .todo:hover{
+                background: #aadd20;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+         * This tag is a container for our React components. Keep in mind that React will overide anything inside these tags with its own code.
+        -->
+        <div id="app"></div>
+
+        <!--
+         * This script calls the top-level React API. It will find our React components and render them into the element specified.
+         * This script also needs to be transformed into js for production, and the type changed to "text/javascript".
+        -->
+        <script type="text/babel">
+            //Calls the top-level render function.
+            ReactDOM.render(
+              //The component to render. In this case it's "App", which is currently residing in the window object for convenience.
+              <window.App />,
+              //The DOM element in-which the component should be rendered. 
+              document.getElementById("app")
+            )
+        </script>
+    </body>
+</html>
